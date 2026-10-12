@@ -1,0 +1,14 @@
+    31518     76 -rwsr-xr-x   1 root     root        74536 Apr 29 00:00 /usr/bin/chage
+    31521     76 -rwsr-xr-x   1 root     root        74032 Apr 29 00:00 /usr/bin/gpasswd
+    31530     44 -rwsr-xr-x   1 root     root        42120 Apr 29 00:00 /usr/bin/newgrp
+    31533     92 -rwsr-xr-x   1 root     root        91424 Apr 29 00:00 /usr/bin/passwd
+    32099     48 -rwsr-xr-x   1 root     root        48744 Jun 16 00:00 /usr/bin/mount
+    32110     36 -rwsr-xr-x   1 root     root        36352 Jun 16 00:00 /usr/bin/umount
+    33850     20 -rwsr-xr-x   1 root     root        19632 Sep 29 00:00 /usr/bin/grub2-set-bootflag
+    35012     40 -rwsr-xr-x   1 root     root        40520 Sep 17 00:00 /usr/bin/fusermount3
+    37033     20 -rwsr-xr-x   1 root     root        19792 Jul  8 00:00 /usr/bin/pam_timestamp_check
+    37035     28 -rwsr-xr-x   1 root     root        28176 Jul  8 00:00 /usr/bin/unix_chkpwd
+    37310     28 -rws--x--x   1 root     root        28152 Jun 16 00:00 /usr/bin/chfn
+    37313     28 -rws--x--x   1 root     root        28080 Jun 16 00:00 /usr/bin/chsh
+    37381     56 -rwsr-xr-x   1 root     root        57176 Jun 16 00:00 /usr/bin/su
+    43234    212 ---s--x--x   1 root     root       215168 Oct  7 00:00 /usr/bin/sudo

@@ -1,0 +1,48 @@
+    1  groupadd students
+    2  adduser -m -u 1234 -G students user1
+    3  passwd user1
+    4  chage -M 90 user1
+    5  id user1
+    6  chage -l user1
+    7  ls -ld /home/user1
+    8  getent passwd user1
+    9  find / -type f -perm -4000 -ls 2>/dev/null > /root/suid-files.out
+   10  cat /root/suid-files.out
+   11  ps -eo pid,ruid,euid,comm | awk 'NR==1 || ($2>=1000 && $3==0)' > /root/process-monitor.out
+   12  sudo -u user1 cat /etc/shadow
+   13  cp /usr/bin/cat /home/user1/cat-suid
+   14  chown root:root /home/user1/cat-suid
+   15  chmod 4755 /home/user1/cat-suid
+   16  ls -l /home/user1/cat-suid
+   17  sudo -u user1 /home/user1/cat-suid /etc/shadow
+   18  cp /usr/bin/chown /home/user1/chown-cap
+   19  chown root:root /home/user1/chown-cap
+   20  chmod 755 /home/user1/chown-cap
+   21  setcap cap_chown+ep /home/user1/chown-cap
+   22  getcap /home/user1/chown-cap
+   23  sudo -u user1 touch /home/user1/cap-test
+   24  ls -l /home/user1/cap-test
+   25  sudo -u user1 /home/user1/chown-cap root:root /home/user1/cap-test
+   26  ls -l /home/user1/cap-test
+   27  command -v date
+   28  visudo -f /etc/sudoers.d/user1-time
+   29  chmod 0440 /etc/sudoers.d/user1-time
+   30  visudo -c
+   31  sudo -l -U user1
+   32  sudo -u user1 sudo /usr/sbin/date -s "2026-10-12 12:00:00"
+   33  date
+   34  echo М265852
+   35  mkdir -p /root/mephi-linux-security-2026
+   36  cp /root/suid-files.out /root/mephi-linux-security-2026/suid-files.out
+   37  cp /root/process-monitor.out /root/mephi-linux-security-2026/process-monitor.out
+   38  stat /home/user1 > /root/mephi-linux-security-2026/stat.out
+   39  stat /home/user1/cat-suid >> /root/mephi-linux-security-2026/stat.out
+   40  stat /home/user1/chown-cap >> /root/mephi-linux-security-2026/stat.out
+   41  getcap /home/user1/chown-cap > /root/mephi-linux-security-2026/getcap.out
+   42  cp /etc/passwd /root/mephi-linux-security-2026/passwd
+   43  cp /etc/shadow /root/mephi-linux-security-2026/shadow
+   44  cp /etc/group /root/mephi-linux-security-2026/group
+   45  cp /etc/sudoers /root/mephi-linux-security-2026/sudoers
+   46  cp /etc/sudoers.d/user1-time /root/mephi-linux-security-2026/user1-time
+   47  history -a
+   48  history > ~/history.out
